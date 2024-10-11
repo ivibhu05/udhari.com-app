@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .mobile_navbar_btn {
+    @apply text-[.9rem] font-semibold text-center border mt-1 border-black py-2 px-6 hover:bg-black hover:text-white hover:border-white duration-200;
+  }
+  .home_page_card_css{
+    @apply flex flex-col items-center border bg-white w-32 h-28 py-2 px-4 max-md:h-24 max-md:w-28
+  }
+  .bg_light_color {
+    @apply bg-white
+  }
+  .text-light{
+    @apply text-white
+  }
+  .sidebar-button{
+    @apply text-[#999] hover:bg-[#333] py-1.5 px-2 w-full duration-200 rounded-[20px] text-center flex gap-2 mt-1 justify-center items-center
+  }
+}
+
+::-webkit-scrollbar{
+  background-color: #333;
+  width: 3px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.body{
+  scroll-behavior: smooth;
+}
+
+.shadowcss{
+  box-shadow:9px 9px 0 #222 ;
+}
+/* .shadowcss:hover{
+  box-shadow:7px 7px 0 #222 ;
+} */
+.app-footer__marquee {
+  color: white;
+  backdrop-filter: blur(4px);
+  font-size: calc(0.8925rem + 6.43571vw);
+  font-weight: 400;
+  padding: 0.25em 0;
+  white-space: nowrap;
+  --marquee-animation-duration: 15s;
+}
+
+.u-marquee {
+  --marquee-gap: 1ch;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.u-marquee,
+.u-marquee__content {
+  display: flex;
+  gap: var(--marquee-gap);
+}
+
+.u-marquee__content {
+  animation: marquee var(--marquee-animation-duration) linear infinite;
+  flex-shrink: 0;
+  justify-content: space-around;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  
+}
+
+.u-marquee__content > * {
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translate(calc(-100% - var(--marquee-gap)));
+  }
+}
+
+@font-face {
+  font-family: "Uzi";
+  src: url("https://raw.githubusercontent.com/vickkie/uzitrake/main/fonts/MonumentExtended-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.for_shadow{
+  box-shadow: 0 0 5px #999;
+}
